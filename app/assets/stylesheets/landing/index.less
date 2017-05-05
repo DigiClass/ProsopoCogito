@@ -167,58 +167,6 @@ h3 {
   width:75%;
 }
 
-.recogito-rightnow {
-  color:@grey-type;
-  text-align:center;
-  padding:50px 0 40px;
-
-  h3, p {
-    margin:0;
-    padding:0;
-  }
-
-  .rn-title {
-    padding:40px 0 20px 0;
-
-    .outline-icon {
-      font-size:48px;
-    }
-
-    h2 {
-      font-size:20px;
-      line-height:16px;
-    }
-
-  }
-
-  .rn-widget {
-    position:relative;
-    margin:20px auto;
-    padding:0;
-    width:490px;
-    .rounded-corners(4px);
-    border:1px solid @lightgrey-border;
-
-    h3 {
-      line-height:38px;
-      font-size:40px;
-    }
-
-    .rn-segment {
-      display:inline-block;
-      padding:20px 0;
-      width:160px;
-      border-right:1px solid @lightgrey-border;
-    }
-
-    .rn-segment:last-child {
-      border:none;
-    }
-
-  }
-
-}
-
 .featurette.inner {
   margin:0 auto;
   padding: 10px 0;
@@ -271,8 +219,115 @@ h3 {
 
 }
 
+.recogito-rightnow {
+  color:@grey-type;
+  text-align:center;
+  padding:50px 0 80px 0;
+
+  h3, p {
+    margin:0;
+    padding:0;
+  }
+
+  .rn-title {
+    padding:40px 0 20px 0;
+
+    .outline-icon {
+      font-size:48px;
+    }
+
+    h2 {
+      font-size:20px;
+      line-height:16px;
+    }
+
+  }
+
+  .rn-widget {
+    position:relative;
+    margin:20px auto;
+    padding:0;
+    width:490px;
+    .rounded-corners(4px);
+    border:1px solid @lightgrey-border;
+
+    h3 {
+      line-height:38px;
+      font-size:40px;
+    }
+
+    .rn-segment {
+      display:inline-block;
+      padding:20px 0;
+      width:160px;
+      border-right:1px solid @lightgrey-border;
+    }
+
+    .rn-segment:last-child {
+      border:none;
+    }
+
+  }
+
+}
+
+.stories {
+  padding:30px 0;
+  background-color:@ocean;
+  color:#fff;
+
+  .image {
+    position:absolute;
+    right:0;
+    top:85px;
+    width:300px;
+    height:300px;
+    .rounded-corners(100%);
+    box-shadow: 0px 0px 0px 5px @ocean, 0px 0px 0px 6px rgba(255, 255, 255, 0.25);
+
+    img {
+      width:100%;
+      .rounded-corners(100%);
+    }
+
+  }
+
+  h2, h3 {
+    font-family:Merriweather;
+    font-weight:400;
+  }
+
+  h2 {
+    font-family:OpenSans;
+    font-size:19px;
+  }
+
+  h3 {
+    font-size:34px;
+    line-height:54px;
+  }
+
+  p {
+    padding:20px 0 10px 0;
+    margin:0;
+    max-width:65%;
+    font-size:18px;
+    line-height:30px;
+  }
+
+  .btn {
+    margin:30px 0 10px 0;
+    font-family:Merriweather;
+    text-shadow:none;
+    color:@ocean;
+    background-color:#fff;
+    border:none;
+  }
+
+}
+
 .partner-logos {
-  padding:50px 0;
+  padding:80px 0;
 
   a {
     text-decoration:none;
