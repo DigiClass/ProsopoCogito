@@ -255,7 +255,7 @@
         "language": "grc-Latn"
       },
       {
-        "name": "Filotera",
+        "name": "Philotera",
         "language": "en"
       },
       {
@@ -269,6 +269,60 @@
       {
         "place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_35426",
         "place-name": "Bouthrotos (Prasaiboi)"
+      }
+    ]
+  },
+  {
+    "URI": "https://www.wikidata.org/wiki/Q6398587",
+    "source-uris": [
+      {
+        "source-db": "Wikidata",
+        "uri-in-db": "https://www.wikidata.org/wiki/Q6398587"
+      }
+    ],
+    "names": [
+      {
+        "name": "Philotera",
+        "language": "en"
+      }
+    ],
+    "start-date": "-0315",
+    "end-date": "-0268",
+    "places": [
+      {
+        "place-uri": "https://www.wikidata.org/wiki/Q87",
+        "place-name": "Alexandria"
+      }
+    ]
+  },
+  {
+    "URI": "http://data.snapdrgn.net/person/616341",
+    "source-uris": [
+      {
+        "source-db": "LGPN",
+        "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V2-65507"
+      }
+    ],
+    "names": [
+      {
+        "name": "Filwtera",
+        "language": "grc-Latn"
+      },
+      {
+        "name": "Philotera",
+        "language": "en"
+      },
+      {
+        "name": "Φιλωτέρα",
+        "language": "grc"
+      }
+    ],
+    "start-date": "-0108",
+    "end-date": "-0103",
+    "places": [
+      {
+        "place-uri": "http://www.lgpn.ox.ac.uk/place/Cholargos",
+        "place-name": "Cholargos"
       }
     ]
   }
