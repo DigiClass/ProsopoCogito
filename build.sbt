@@ -8,6 +8,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalacOptions ++= Seq("-feature")
 
+checksums := Seq("")
+
 resolvers ++= Seq(
   "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases",
   "Open Source Geospatial Foundation Repository" at "http://download.osgeo.org/webdav/geotools/",

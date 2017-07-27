@@ -40,6 +40,7 @@ define([
         };
 
     element.on('click', '.delete', function() { self.fireEvent('delete'); });
+    element.on('click', '.category-icon', function() { self.fireEvent('searchPerson'); });
 
     this.body = personBody;
     this.destroy = destroy;
