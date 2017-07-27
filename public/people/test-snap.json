@@ -1,84 +1,200 @@
-[{
+[
+  {
     "URI": "http://data.snapdrgn.net/person/673934",
     "source-uris": [
-        {
-            "source-db": "LGPN",
-            "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V5a-52485"
-        },
-        {
-            "source-db": "PIR",
-            "uri-in-db": "http://www.paregorios.org/resources/roman-elites/persons/pir2-l-0236"
-        }
+      {
+        "source-db": "LGPN",
+        "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V5a-52485"
+      },
+      {
+        "source-db": "PIR",
+        "uri-in-db": "http://www.paregorios.org/resources/roman-elites/persons/pir2-l-0236"
+      }
     ],
     "names": [
-        {"name":"M. CN. LICINIVS RVFINVS", "language":"la"},
-        {"name":"Roufinos","language":"en"},
-        {"name":"Ῥουφῖνος","language":"grc"}
+      {
+        "name": "M. CN. LICINIVS RVFINVS",
+        "language": "la"
+      },
+      {
+        "name": "Roufinos",
+        "language": "en"
+      },
+      {
+        "name": "Ῥουφῖνος",
+        "language": "grc"
+      }
     ],
     "start-date": "0201",
     "end-date": "0250",
-    "places":[
-    {"place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_50552",
-    "place-name": "Thyateira"}
+    "places": [
+      {
+        "place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_50552",
+        "place-name": "Thyateira"
+      }
     ]
-},
-{
+  },
+  {
     "URI": "http://www.british-history.ac.uk/fasti/001",
     "source-uris": [
-        {
-            "source-db": "BHO",
-            "uri-in-db": "http://www.british-history.ac.uk/fasti/001"
-        }
+      {
+        "source-db": "BHO",
+        "uri-in-db": "http://www.british-history.ac.uk/fasti/001"
+      }
     ],
     "names": [
-        {"name":"M. Durand", "language":"en"}
+      {
+        "name": "M. Durand",
+        "language": "en"
+      }
     ],
     "start-date": "1086",
     "end-date": "1127-01",
-    "places":[
-    {"place-uri": "http://sws.geonames.org/2643743/",
-    "place-name": "London"},
-    {"place-uri": "http://sws.geonames.org/7297921/",
-    "place-name": "Twiford"}
+    "places": [
+      {
+        "place-uri": "http://sws.geonames.org/2643743/",
+        "place-name": "London"
+      },
+      {
+        "place-uri": "http://sws.geonames.org/7297921/",
+        "place-name": "Twiford"
+      }
     ]
-},
-{
+  },
+  {
     "URI": "http://www.british-history.ac.uk/fasti/002",
     "source-uris": [
-        {
-            "source-db": "BHO",
-            "uri-in-db": "http://www.british-history.ac.uk/fasti/002"
-        }
+      {
+        "source-db": "BHO",
+        "uri-in-db": "http://www.british-history.ac.uk/fasti/002"
+      }
     ],
     "names": [
-        {"name":"M. Hugh", "language":"en"}
+      {
+        "name": "M. Hugh",
+        "language": "en"
+      }
     ],
     "start-date": "1111",
     "end-date": "1127",
-    "places":[
-    {"place-uri": "http://sws.geonames.org/2643743/",
-    "place-name": "London"},
-    {"place-uri": "http://sws.geonames.org/2646476/",
-    "place-name": "Hoxton"}
+    "places": [
+      {
+        "place-uri": "http://sws.geonames.org/2643743/",
+        "place-name": "London"
+      },
+      {
+        "place-uri": "http://sws.geonames.org/2646476/",
+        "place-name": "Hoxton"
+      }
     ]
-},
-{
-    "URI": "http://data.snapdrgn.net/person/601836/",
+  },
+  {
+    "URI": "http://data.snapdrgn.net/person/601836",
     "source-uris": [
-        {
-            "source-db": "LGPN",
-            "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V1-15291"
-        }
+      {
+        "source-db": "LGPN",
+        "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V1-15291"
+      }
     ],
     "names": [
-        {"name":"Qrasudamos", "language":"grc-Latn"},
-        {"name":"Θρασύδαμος", "language":"grc"}
+      {
+        "name": "Qrasudamos",
+        "language": "grc-Latn"
+      },
+      {
+        "name": "Θρασύδαμος",
+        "language": "grc"
+      }
     ],
     "start-date": "-0082",
     "end-date": "-0082",
-    "places":[
-    {"place-uri": "http://pleiades.stoa.org/places/599728",
-    "place-name": "Kos"}
+    "places": [
+      {
+        "place-uri": "http://pleiades.stoa.org/places/599728",
+        "place-name": "Kos"
+      }
     ]
-}
+  },
+  {
+    "URI": "http://data.snapdrgn.net/person/55801",
+    "source-uris": [
+      {
+        "source-db": "Trismegistos",
+        "uri-in-db": "http://www.trismegistos.org/ref/206419"
+      }
+    ],
+    "names": [
+      {
+        "name": "Ἁρουήρις",
+        "language": "grc"
+      },
+      {
+        "name": "Haroeris",
+        "language": "en"
+      },
+      {
+        "name": "Ḥr-wr",
+        "language": "egy-Egyd"
+      }
+    ],
+    "start-date": "0200",
+    "end-date": "0284",
+    "places": [
+      {
+        "place-uri": "http://www.trismegistos.org/place/34",
+        "place-name": "Abydos"
+      }
+    ]
+  },
+  {
+    "URI": "https://www.wikidata.org/wiki/Q68366",
+    "source-uris": [
+      {
+        "source-db": "Wikidata",
+        "uri-in-db": "https://www.wikidata.org/wiki/Q68366"
+      }
+    ],
+    "names": [
+      {
+        "name": "Siward, Earl of Northumbria",
+        "language": "en"
+      },
+      {
+        "name": "Sigurd",
+        "language": "en"
+      },
+      {
+        "name": "Sigeweard",
+        "language": "en"
+      },
+      {
+        "name": "Digri",
+        "language": "en"
+      },
+      {
+        "name": "Grossus",
+        "language": "en"
+      },
+      {
+        "name": "Digiera",
+        "language": "en"
+      },
+      {
+        "name": "Сивард",
+        "language": "ru"
+      }
+    ],
+    "start-date": "1023",
+    "end-date": "1055",
+    "places": [
+      {
+        "place-uri": "https://www.wikidata.org/wiki/Q42462",
+        "place-name": "York"
+      },
+      {
+        "place-uri": "https://www.wikidata.org/wiki/Q107299",
+        "place-name": "Northumbria"
+      }
+    ]
+  }
 ]
