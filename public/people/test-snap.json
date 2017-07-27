@@ -1,0 +1,22 @@
+[{
+    "URI": "http://data.snapdrgn.net/person/673934",
+    "source-uris": [
+        {
+            "source-db": "LGPN",
+            "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V5a-52485"
+        },
+        {
+            "source-db": "PIR",
+            "uri-in-db": "http://www.paregorios.org/resources/roman-elites/persons/pir2-l-0236"
+        }
+    ],
+    "names": [
+        {"name":"M. CN. LICINIVS RVFINVS", "language":"la"},
+        {"name":"Roufinos","language":"en"},
+        {"name":"Ῥουφῖνος","language":"grc"}
+    ],
+    "start-date": "0201",
+    "end-date": "0250",
+    "place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_50552",
+    "place-name": "Thyateira"
+}]
