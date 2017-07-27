@@ -10,8 +10,9 @@ define([
   'common/api',
   'document/annotation/common/editor/editorBase',
   'document/annotation/common/editor/textEntryField',
-  'document/annotation/common/georesolution/georesolutionPanel'
-], function(AnnotationUtils, PlaceUtils, API, EditorBase, TextEntryField, GeoresolutionPanel) {
+  'document/annotation/common/georesolution/georesolutionPanel',
+  'document/annotation/common/personSearch/personSearch'
+], function(AnnotationUtils, PlaceUtils, API, EditorBase, TextEntryField, GeoresolutionPanel, PersonSearch) {
 
   var WriteEditor = function(container, selectionHandler, options) {
     var self = this,
@@ -70,6 +71,8 @@ define([
         }),
 
         georesolutionPanel = new GeoresolutionPanel(),
+
+        personSearch = new PersonSearch(),
 
         annotationMode = { mode: 'NORMAL' },
 
@@ -189,6 +192,10 @@ define([
           georesolutionPanel.open(self.getMostRecentContext(), section.body);
         },
 
+        onSearchPerson = function(section) {
+          personSearch.open();
+        },
+
         /** Georesolution was changed - forward changes to the section list **/
         onGeoresolutionChanged = function(placeBody, diff) {
           self.sectionList.updateSection(placeBody, diff);
@@ -219,6 +226,7 @@ define([
     // Events from the section List
     this.sectionList.on('submit', onOK);
     this.sectionList.on('change', onChangeGeoresolution);
+    this.sectionList.on('searchPerson', onSearchPerson);
 
     // ESC key doubles as 'Cancel'
     this.on('escape', onCancel);

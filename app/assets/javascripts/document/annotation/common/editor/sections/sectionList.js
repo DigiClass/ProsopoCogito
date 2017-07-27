@@ -150,6 +150,7 @@ define([
 
         initPersonSection = function(personBody) {
           var personSection = new PersonSection(centerSectionEl, personBody);
+          forwardEvent(personSection, 'searchPerson');
           handleDelete(personSection);
           sections.push(personSection);
         },
