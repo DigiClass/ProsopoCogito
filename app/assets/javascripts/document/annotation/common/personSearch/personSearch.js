@@ -1,6 +1,6 @@
 define([
-
-], function() {
+'/assets/people/test-snap.json'
+], function(People) {
 
   var personSearch = function() {
 
@@ -37,9 +37,16 @@ define([
           '</div>'
         ).appendTo(document.body).hide(),
 
-        open = function () {
+        open = function (body) {
           element.show();
+        },
+
+        onSaveMySearch = function(snapUri) {
+          self.fireEvent('save', body, { uri: snapUri });
         };
+
+
+    console.log('people:', People);
 
        this.open = open;
   };
