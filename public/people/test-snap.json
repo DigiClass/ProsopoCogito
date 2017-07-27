@@ -356,5 +356,36 @@
         "place-name": "Amherst, Massachusetts, USA"
       }
     ]
-  }
+  },
+  {
+  "URI": "https://www.wikidata.org/wiki/Q204843",
+  "source-uris": [
+    {
+      "source-db": "Wikidata",
+      "uri-in-db": "https://www.wikidata.org/wiki/Q204843"
+    }
+  ],
+  "names": [
+    {
+      "name": "Theodora",
+      "language": "en"
+    },
+    {
+      "name": "Θεοδώρα",
+      "language": "grc"
+    }
+  ],
+  "start-date": "0500",
+  "end-date": "0548",
+  "places": [
+    {
+      "place-uri": "https://www.wikidata.org/wiki/Q229",
+      "place-name": "Cyprus"
+    },
+    {
+      "place-uri": "https://www.wikidata.org/wiki/Q16869",
+      "place-name": "Costantinople"
+    }
+  ]
+}
 ]
