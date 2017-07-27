@@ -21,4 +21,64 @@
     {"place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_50552",
     "place-name": "Thyateira"}
     ]
-}]
+},
+{
+    "URI": "http://www.british-history.ac.uk/fasti/001",
+    "source-uris": [
+        {
+            "source-db": "BHO",
+            "uri-in-db": "http://www.british-history.ac.uk/fasti/001"
+        }
+    ],
+    "names": [
+        {"name":"M. Durand", "language":"en"}
+    ],
+    "start-date": "1086",
+    "end-date": "1127-01",
+    "places":[
+    {"place-uri": "http://sws.geonames.org/2643743/",
+    "place-name": "London"},
+    {"place-uri": "http://sws.geonames.org/7297921/",
+    "place-name": "Twiford"}
+    ]
+},
+{
+    "URI": "http://www.british-history.ac.uk/fasti/002",
+    "source-uris": [
+        {
+            "source-db": "BHO",
+            "uri-in-db": "http://www.british-history.ac.uk/fasti/002"
+        }
+    ],
+    "names": [
+        {"name":"M. Hugh", "language":"en"}
+    ],
+    "start-date": "1111",
+    "end-date": "1127",
+    "places":[
+    {"place-uri": "http://sws.geonames.org/2643743/",
+    "place-name": "London"},
+    {"place-uri": "http://sws.geonames.org/2646476/",
+    "place-name": "Hoxton"}
+    ]
+},
+{
+    "URI": "http://data.snapdrgn.net/person/601836/",
+    "source-uris": [
+        {
+            "source-db": "LGPN",
+            "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V1-15291"
+        }
+    ],
+    "names": [
+        {"name":"Qrasudamos", "language":"grc-Latn"},
+        {"name":"Θρασύδαμος", "language":"grc"}
+    ],
+    "start-date": "-0082",
+    "end-date": "-0082",
+    "places":[
+    {"place-uri": "http://pleiades.stoa.org/places/599728",
+    "place-name": "Kos"}
+    ]
+}
+]
