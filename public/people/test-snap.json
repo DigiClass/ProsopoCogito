@@ -325,5 +325,36 @@
         "place-name": "Cholargos"
       }
     ]
+  },
+  {
+    "URI": "https://www.wikidata.org/wiki/Q4441",
+    "source-uris": [
+      {
+        "source-db": "Wikidata",
+        "uri-in-db": "https://www.wikidata.org/wiki/Q4441"
+      }
+    ],
+    "names": [
+      {
+        "name": "Emily Dickinson",
+        "language": "en"
+      },
+      {
+        "name": "Emily Elizabeth Dickinson",
+        "language": "en"
+      },
+      {
+        "name": "Emily Dickenson",
+        "language": "la"
+      }
+    ],
+    "start-date": "1830-12-10",
+    "end-date": "1886-05-15",
+    "places": [
+      {
+        "place-uri": "http://sws.geonames.org/4929022/",
+        "place-name": "Amherst, Massachusetts, USA"
+      }
+    ]
   }
 ]
