@@ -17,6 +17,8 @@
     ],
     "start-date": "0201",
     "end-date": "0250",
-    "place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_50552",
-    "place-name": "Thyateira"
+    "places":[
+    {"place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_50552",
+    "place-name": "Thyateira"}
+    ]
 }]
