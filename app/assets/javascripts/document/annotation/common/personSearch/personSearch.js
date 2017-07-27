@@ -52,8 +52,9 @@ define([
 
         searchListResults   = element.find('.peopleResults'),
 
-        onSaveMySearch = function(snapUri) {
-          self.fireEvent('save', body, { uri: snapUri });
+        onSaveMySearch = function(e) {
+          // TODO body is not defined. Extract uri from e.target
+          self.fireEvent('save', body, { uri: e.target });
         };
 
         searchInput.keyup(function(e) {
@@ -77,12 +78,13 @@ define([
           });
 
           searchResults.forEach(function(p) {
-            // TODO Add onClick functionality to call onSaveMySearch with p.URI as e.target.value
-            var listItem = '<li class="listItem">'+ p.names[0].name + '</li>';
+            var listItem = '<li class="listItem" onClick="' + p + '">' + p.names[0].name + '</li>';
             searchListResults.append(listItem);
           });
 
         });
+
+        jQuery('.peopleResults').on('click', onSaveMySearch);
 
         this.open = open;
   };
