@@ -196,5 +196,80 @@
         "place-name": "Northumbria"
       }
     ]
+  },
+  {
+    "URI": "https://www.wikidata.org/wiki/Q9965",
+    "source-uris": [
+      {
+        "source-db": "Wikidata",
+        "uri-in-db": "https://www.wikidata.org/wiki/Q9965"
+      }
+    ],
+    "names": [
+      {
+        "name": "Yongle Emperor",
+        "language": "en"
+      },
+      {
+        "name": "Ming Yongle",
+        "language": "fr"
+      },
+      {
+        "name": "Īng-lŏk Huòng-dá̤",
+        "language": "cdo"
+      },
+      {
+        "name": "永楽帝",
+        "language": "ja"
+      },
+      {
+        "name": "الإمبراطور يونغلي",
+        "language": "ar"
+      }
+    ],
+    "start-date": "1360-05-02",
+    "end-date": "1424-08-12",
+    "places": [
+      {
+        "place-uri": "https://www.wikidata.org/wiki/Q16666",
+        "place-name": "Nanjing"
+      },
+      
+      {
+        "place-uri": "https://www.wikidata.org/wiki/Q41079",
+        "place-name": "Inner Mongolia"
+      }
+]
+},
+  {
+    "URI": "http://data.snapdrgn.net/person/450896/",
+    "source-uris": [
+      {
+        "source-db": "LGPN",
+        "uri-in-db": "http://www.lgpn.ox.ac.uk/id/V3a-58084"
+      }
+    ],
+    "names": [
+      {
+        "name": "Filwtera",
+        "language": "grc-Latn"
+      },
+      {
+        "name": "Filotera",
+        "language": "en"
+      },
+      {
+        "name": "Φιλωτέρα",
+        "language": "grc"
+      }
+    ],
+    "start-date": "-0163",
+    "end-date": "-0113",
+    "places": [
+      {
+        "place-uri": "http://www.lgpn.ox.ac.uk/placecode/LGPN_35426",
+        "place-name": "Bouthrotos (Prasaiboi)"
+      }
+    ]
   }
 ]
