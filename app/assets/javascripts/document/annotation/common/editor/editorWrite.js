@@ -193,7 +193,11 @@ define([
         },
 
         onSearchPerson = function(section) {
-          personSearch.open();
+          personSearch.open(section);
+        },
+
+        onSavePerson = function(personBody, diff) {
+          self.sectionList.updateSection(personBody, diff);
         },
 
         /** Georesolution was changed - forward changes to the section list **/
