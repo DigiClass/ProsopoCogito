@@ -10,6 +10,8 @@ define([
 
     var self = this,
 
+        currentBody,
+
         element = jQuery(
           '<div class="clicktrap">' +
             '<div class="modal-wrapper georesolution-wrapper">' +
@@ -45,6 +47,7 @@ define([
         ).appendTo(document.body).hide(),
 
         open = function (body) {
+          currentBody = body;
           element.show();
         },
 
@@ -53,11 +56,14 @@ define([
         searchListResults   = element.find('.peopleResults'),
 
         onSaveMySearch = function(e) {
-          // TODO body is not defined. Extract uri from e.target
-          self.fireEvent('save', body, { uri: e.target });
+          var li = jQuery(e.target).closest('li');
+          console.log(self);
+
+          self.fireEvent('save', currentBody, { uri: jQuery(li).data('uri') });
         };
 
         searchInput.keyup(function(e) {
+          // TODO Improve search
           // if (e.which === 13) {
           //   clear();
           //   currentSearch = searchInput.val().trim();
@@ -78,7 +84,7 @@ define([
           });
 
           searchResults.forEach(function(p) {
-            var listItem = '<li class="listItem" onClick="' + p + '">' + p.names[0].name + '</li>';
+            var listItem = '<li class="listItem" data-uri="' + p.URI + '">' + p.names[0].name + '</li>';
             searchListResults.append(listItem);
           });
 
