@@ -1,6 +1,7 @@
 define([
-
-], function() {
+  'common/api',
+  'common/hasEvents'
+], function(API, HasEvents) {
   var people;
   jQuery.getJSON('/assets/people/test-snap.json').done(function(p) {
     people = p;
@@ -10,7 +11,7 @@ define([
 
     var self = this,
 
-        currentBody,
+        personBody,
 
         element = jQuery(
           '<div class="clicktrap">' +
@@ -19,7 +20,7 @@ define([
                 '<div class="modal-header">' +
                   // search box
                   '<div class="georesolution-search">' +
-                    '<input class="search inline" type="text" placeholder="Search for a Place..." />' +
+                    '<input class="search inline" type="text" placeholder="Search for a Person..." />' +
                     '<button class="search icon">&#xf002;</button>' +
                   '</div>' +
                   '<button class="nostyle outline-icon cancel">&#xe897;</button>' +
@@ -47,7 +48,8 @@ define([
         ).appendTo(document.body).hide(),
 
         open = function (body) {
-          currentBody = body;
+          personBody = body;
+
           element.show();
         },
 
@@ -57,9 +59,16 @@ define([
 
         onSaveMySearch = function(e) {
           var li = jQuery(e.target).closest('li');
-          console.log(self);
 
-          self.fireEvent('save', currentBody, { uri: jQuery(li).data('uri') });
+          close();
+          self.fireEvent('save', personBody, { uri: jQuery(li).data('uri') });
+        },
+
+        close = function() {
+          personBody = false;
+          // closeUnlocatedPopup();
+          // waitForNext.hide();
+          element.hide();
         };
 
         searchInput.keyup(function(e) {
@@ -93,7 +102,9 @@ define([
         jQuery('.peopleResults').on('click', onSaveMySearch);
 
         this.open = open;
+        HasEvents.apply(this);
   };
+  personSearch.prototype = Object.create(HasEvents.prototype);
 
   return personSearch;
 });
