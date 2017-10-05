@@ -7,6 +7,8 @@ define([
   var PersonSection = function(parent, personBody, personName) {
     var self = this,
 
+        infoEl,
+
         element = (function() {
           var lastModified = jQuery(
                 '<div class="last-modified">' +
@@ -24,7 +26,7 @@ define([
                 '</div>');
 
           if (personBody.last_modified_by) {
-            var infoEl = el.find('.info');
+            infoEl = el.find('.info');
             infoEl.append(lastModified);
 
             if (Config.writeAccess)
@@ -35,6 +37,37 @@ define([
           return el;
         })(),
 
+        /** Updates the section with a change performed by the user **/
+        update = function(diff) {
+          var lastModified = { by: Config.me, at: new Date() };
+
+          // Diffs contain uri and status info
+          if (personBody.uri !== diff.uri && diff.uri) {
+            // There's a new URI - update the place card
+            // fillFromURI(diff.uri, diff.status, lastModified);
+            var uri = jQuery(
+              '<div>' +
+                '<p>' + diff.uri + '<p>' +
+              '<div>');
+            infoEl.append(uri);
+          }
+          // else if (!diff.uri) {
+          //   // There's no URI now (but there was one before!) - change to 'No Match' card
+          //   renderNoMatchCard(diff.status, lastModified);
+          // }
+
+          // Queue these updates for deferred storage
+          // queuedUpdates.push(function() {
+          //   delete personBody.last_modified_by;
+          //   delete personBody.last_modified_at;
+          //   personBody.status = diff.status;
+          //   if (diff.uri)
+          //     personBody.uri = diff.uri;
+          //   else
+          //     delete personBody.uri;
+          // });
+        },
+
         destroy = function() {
           element.remove();
         };
@@ -43,6 +76,7 @@ define([
     element.on('click', '.category-icon', function() { self.fireEvent('searchPerson'); });
 
     this.body = personBody;
+    this.update = update;
     this.destroy = destroy;
     this.hasChanged = function() { return false; };
     this.commit = function() {}; // Not (yet) needed
