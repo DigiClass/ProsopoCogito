@@ -192,21 +192,23 @@ define([
           georesolutionPanel.open(self.getMostRecentContext(), section.body);
         },
 
+        /** Georesolution was changed - forward changes to the section list **/
+        onGeoresolutionChanged = function(placeBody, diff) {
+          self.sectionList.updateSection(placeBody, diff);
+        },
+
         onSearchPerson = function(section) {
-          personSearch.open(section);
+          personSearch.open(section.body);
         },
 
         onSavePerson = function(personBody, diff) {
           self.sectionList.updateSection(personBody, diff);
-        },
-
-        /** Georesolution was changed - forward changes to the section list **/
-        onGeoresolutionChanged = function(placeBody, diff) {
-          self.sectionList.updateSection(placeBody, diff);
         };
 
     // Georesolution change
     georesolutionPanel.on('change', onGeoresolutionChanged);
+
+    personSearch.on('save', onSavePerson);
 
     // Ctrl+Enter on the reply field doubles as 'OK'
     replyField.on('submit', onOK);
