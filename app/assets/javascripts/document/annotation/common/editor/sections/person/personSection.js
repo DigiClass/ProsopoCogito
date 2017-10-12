@@ -7,8 +7,10 @@ define([
   var PersonSection = function(parent, personBody, personName) {
     var self = this,
 
-        infoEl,
+        /** Changes to be applied to the annotation when the user clicks OK **/
+        queuedUpdates = [],
 
+        // TODO clean up
         element = (function() {
           var lastModified = jQuery(
                 '<div class="last-modified">' +
@@ -39,35 +41,41 @@ define([
           return el;
         })(),
 
-        /** Updates the section with a change performed by the user **/
+        /**
+         * Updates the section with a change performed by the user
+         * TODO this is pretty much identical to placeSection - move into common base class!
+         */
         update = function(diff) {
           var lastModified = { by: Config.me, at: new Date() };
 
-          // Diffs contain uri and status info
           if (personBody.uri !== diff.uri && diff.uri) {
-            // There's a new URI - update the place card
-            // fillFromURI(diff.uri, diff.status, lastModified);
+            // TODO render URI in element
             var uri = jQuery(
               '<div>' +
                 '<p>' + diff.uri + '<p>' +
               '<div>');
-            infoEl.append(uri);
+            element.find('.info').append(uri);
           }
-          // else if (!diff.uri) {
-          //   // There's no URI now (but there was one before!) - change to 'No Match' card
-          //   renderNoMatchCard(diff.status, lastModified);
-          // }
 
           // Queue these updates for deferred storage
-          // queuedUpdates.push(function() {
-          //   delete personBody.last_modified_by;
-          //   delete personBody.last_modified_at;
-          //   personBody.status = diff.status;
-          //   if (diff.uri)
-          //     personBody.uri = diff.uri;
-          //   else
-          //     delete personBody.uri;
-          // });
+          queuedUpdates.push(function() {
+            delete personBody.last_modified_by;
+            delete personBody.last_modified_at;
+            if (diff.uri)
+              personBody.uri = diff.uri;
+            else
+              delete personBody.uri;
+          });
+        },
+
+        /** TODO identical to placeSection - move into common base class **/
+        commit = function() {
+          jQuery.each(queuedUpdates, function(idx, fn) { fn(); });
+        },
+
+        /** TODO identical to placeSection - move into common base class **/
+        hasChanged = function() {
+          return queuedUpdates.length > 0;
         },
 
         destroy = function() {
@@ -80,8 +88,8 @@ define([
     this.body = personBody;
     this.update = update;
     this.destroy = destroy;
-    this.hasChanged = function() { return false; };
-    this.commit = function() {}; // Not (yet) needed
+    this.hasChanged = hasChanged;
+    this.commit = commit;
 
     Section.apply(this);
   };
