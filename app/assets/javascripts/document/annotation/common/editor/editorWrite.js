@@ -205,9 +205,9 @@ define([
           self.sectionList.updateSection(personBody, diff);
         };
 
-    // Georesolution change
+    // Entity resolution change
+    // TODO make this nicer, e.g. don't keep separate vars but a list/hash of 'entity searches'?
     georesolutionPanel.on('change', onGeoresolutionChanged);
-
     personSearch.on('save', onSavePerson);
 
     // Ctrl+Enter on the reply field doubles as 'OK'

@@ -57,20 +57,16 @@ define([
         },
 
         searchInput     = element.find('.search'),
-
         searchListResults   = element.find('.peopleResults'),
 
         onSaveMySearch = function(e) {
           var li = jQuery(e.target).closest('li');
-
-          close();
           self.fireEvent('save', personBody, { uri: jQuery(li).data('uri') });
+          close();
         },
 
         close = function() {
           personBody = false;
-          // closeUnlocatedPopup();
-          // waitForNext.hide();
           element.hide();
         };
 
