@@ -47,9 +47,12 @@ define([
           '</div>'
         ).appendTo(document.body).hide(),
 
+        btnCancel   = element.find('.cancel'),
+        waitForNext = element.find('.wait-for-next'),
+
         open = function (body) {
           personBody = body;
-
+          waitForNext.hide();
           element.show();
         },
 
@@ -99,10 +102,12 @@ define([
 
         });
 
-        jQuery('.peopleResults').on('click', onSaveMySearch);
+    jQuery('.peopleResults').on('click', onSaveMySearch);
 
-        this.open = open;
-        HasEvents.apply(this);
+    btnCancel.click(close);
+
+    this.open = open;
+    HasEvents.apply(this);
   };
   personSearch.prototype = Object.create(HasEvents.prototype);
 
