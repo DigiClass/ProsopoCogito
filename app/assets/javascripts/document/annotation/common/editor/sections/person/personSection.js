@@ -23,15 +23,17 @@ define([
                 '<div class="section category person">' +
                   '<div class="category-icon">&#xe863;</div>' +
                   '<div class="info"><span>Marked as a Person</span></div>' +
-                '</div>');
+                '</div>'),
 
-          if (personBody.last_modified_by) {
-            infoEl = el.find('.info');
+              infoEl = el.find('.info');
+
+          if (personBody.last_modified_at)
             infoEl.append(lastModified);
 
-            if (Config.writeAccess)
-              infoEl.append('<button class="btn tiny delete icon">&#xf014;</button>');
-          }
+          if (Config.writeAccess)
+            infoEl.append(
+              '<button class="change btn tiny icon">&#xf040;</button>' +
+              '<button class="delete btn tiny icon">&#xf014;</button>');
 
           parent.append(el);
           return el;
@@ -73,7 +75,7 @@ define([
         };
 
     element.on('click', '.delete', function() { self.fireEvent('delete'); });
-    element.on('click', '.category-icon', function() { self.fireEvent('searchPerson'); });
+    element.on('click', '.change', function() { self.fireEvent('searchPerson'); });
 
     this.body = personBody;
     this.update = update;
