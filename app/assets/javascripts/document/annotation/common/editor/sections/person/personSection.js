@@ -24,10 +24,17 @@ define([
               el = jQuery(
                 '<div class="section category person">' +
                   '<div class="category-icon">&#xe863;</div>' +
-                  '<div class="info"><span>Marked as a Person</span></div>' +
+                  '<div class="info">' +
+                    '<div>Marked as a Person</div>' +
+                    '<div class="uri"></div>' +
+                  '</div>' +
                 '</div>'),
 
               infoEl = el.find('.info');
+
+          if (personBody.uri)
+            infoEl.find('.uri').html(
+              '<a target="_blank" href="' + personBody.uri + '">' + personBody.uri + '</a>');
 
           if (personBody.last_modified_at)
             infoEl.append(lastModified);
@@ -48,14 +55,9 @@ define([
         update = function(diff) {
           var lastModified = { by: Config.me, at: new Date() };
 
-          if (personBody.uri !== diff.uri && diff.uri) {
-            // TODO render URI in element
-            var uri = jQuery(
-              '<div>' +
-                '<p>' + diff.uri + '<p>' +
-              '<div>');
-            element.find('.info').append(uri);
-          }
+          if (personBody.uri !== diff.uri && diff.uri)
+            element.find('.info .uri').html(
+              '<a target="_blank" href="' + diff.uri + '">' + diff.uri + '</a>');
 
           // Queue these updates for deferred storage
           queuedUpdates.push(function() {
