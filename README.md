@@ -1,4 +1,6 @@
-# Recogito 2
+A fork of the [Recogito 2](https://github.com/pelagios/recogito2) codebase, begun in 2017 to add [SNAP](https://snapdrgn.net/)-compatible person-search and annotation features to the platform. Agenda described in the outline of the [OEDUc hackathon](https://github.com/EpiDoc/OEDUc/wiki/SNAP:DRGN-integration-for-Recogito).
+
+## Recogito 2
 
 [![Project Stats](https://www.openhub.net/p/recogito2/widgets/project_thin_badge.gif)](https://www.openhub.net/p/recogito2)
 
